@@ -7,9 +7,11 @@ from telegram.ext import (
     filters,
     ContextTypes
 )
-TELEGRAM_TOKEN = "8660275559:AAGp1-eQkjOYMt9PJUcXDYwilxhEkgzYM5g"
-GROQ_API_KEY = "import os
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")"
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
 
 historico = {}
 
@@ -65,8 +67,6 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
     resposta = perguntar_groq(user_id, user_message)
 
     await update.message.reply_text(resposta)
-git add bot.py
-git commit -m "commit limpo sem api key"
 app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
