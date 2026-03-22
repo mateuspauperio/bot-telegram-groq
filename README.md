@@ -6,6 +6,8 @@
 
 Um assistente pessoal para Telegram integrado à API do **Groq Cloud**, utilizando o modelo **Llama 3.3 70b** para respostas ultrarrápidas e inteligentes. O bot possui memória de contexto para manter conversas fluidas.
 
+---
+
 ## ✨ Funcionalidades
 
 - ⚡ **Respostas Instantâneas:** Baixíssima latência graças à infraestrutura da Groq.
@@ -13,20 +15,50 @@ Um assistente pessoal para Telegram integrado à API do **Groq Cloud**, utilizan
 - 🛠️ **Fácil Configuração:** Utiliza variáveis de ambiente para segurança das chaves de API.
 - 🐍 **Totalmente Assíncrono:** Desenvolvido com `python-telegram-bot` v20+.
 
+---
+
 ## 🚀 Tecnologias Utilizadas
 
-* [Python 3.10+](https://www.python.org/)
-* [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) - Framework para bots de Telegram.
-* [Requests](https://requests.readthedocs.io/) - Para chamadas à API do Groq.
-* [Groq Cloud API](https://console.groq.com/) - Processamento de LLM em alta velocidade.
+- Python 3.10+
+- python-telegram-bot — Framework para bots do Telegram
+- Requests — Para chamadas HTTP
+- Groq Cloud API — Processamento de IA em alta velocidade
+
+---
+
+## 🧩 Arquitetura
+
+O funcionamento do bot segue o fluxo:
+
+1. Usuário envia mensagem no Telegram  
+2. O bot recebe via polling  
+3. A mensagem é enviada para a API do Groq  
+4. A IA processa e retorna a resposta  
+5. O bot responde ao usuário  
+6. O histórico é armazenado temporariamente em memória  
+
+---
+
+## 📸 Exemplo de uso
+
+**Usuário:** Olá  
+**Bot:** Olá! Como posso te ajudar hoje?
+
+---
 
 ## 📦 Como Instalar e Rodar
 
 ### 1. Requisitos
+
 Você precisará de:
-- Um **Token de Bot** (obtido no [@BotFather](https://t.me/botfather)).
-- Uma **API Key do Groq** (obtida no [Groq Console](https://console.groq.com/)).
-### 2. Clonar o Repositório
+
+- Um **Token de Bot** (obtido no BotFather)
+- Uma **API Key do Groq** (obtida no console da Groq)
+
+---
+
+### 2. Clonar o repositório
+
 ```bash
-git clone [https://github.com/mateuspauperio/bot-telegram-groq.git](https://github.com/mateuspauperio/bot-telegram-groq.git)
+git clone https://github.com/mateuspauperio/bot-telegram-groq.git
 cd bot-telegram-groq
