@@ -26,7 +26,6 @@ Um assistente pessoal para Telegram integrado à API do **Groq Cloud**, utilizan
 Você precisará de:
 - Um **Token de Bot** (obtido no [@BotFather](https://t.me/botfather)).
 - Uma **API Key do Groq** (obtida no [Groq Console](https://console.groq.com/)).
-
 ### 2. Clonar o Repositório
 ```bash
 git clone [https://github.com/mateuspauperio/bot-telegram-groq.git](https://github.com/mateuspauperio/bot-telegram-groq.git)
